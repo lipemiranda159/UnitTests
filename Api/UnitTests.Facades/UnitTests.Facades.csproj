@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UnitTests.Models\UnitTests.Models.csproj" />
-    <ProjectReference Include="..\UnitTests.Services\UnitTests.Services.csproj" />
+    <ProjectReference Include="..\BankAccount.Services\BankAccount.Services.csproj" />
   </ItemGroup>
 
 </Project>

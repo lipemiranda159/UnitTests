@@ -14,7 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.Facades", "UnitTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.Models", "UnitTests.Models\UnitTests.Models.csproj", "{46EC828B-835E-4475-B0ED-F1EFC0DBCB51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Services", "UnitTests.Services\UnitTests.Services.csproj", "{8562C21A-DC12-4F70-AA93-C136563F2CD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccount.Services", "BankAccount.Services\BankAccount.Services.csproj", "{8562C21A-DC12-4F70-AA93-C136563F2CD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Tests", "UnitTests.Tests\UnitTests.Tests.csproj", "{FE7A5C89-B282-4526-A91B-45A586FA9BD7}"
 EndProject
