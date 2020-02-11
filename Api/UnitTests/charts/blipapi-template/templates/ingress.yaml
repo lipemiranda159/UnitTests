@@ -1,0 +1,28 @@
+{{- if .Values.ingress.enabled -}}
+{{- $fullName := include "blipapi-template.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ template "blipapi-template.fullname" . }}-{{ .Values.environment.stage }}
+  labels:
+    app: {{ template "blipapi-template.name" . }}
+    chart: {{ template "blipapi-template.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- with .Values.ingress.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+  rules:
+    - host: {{ .Values.ingress.hostName }}
+      http:
+        paths:
+          - backend:
+              serviceName: {{ template "blipapi-template.fullname" . }}-{{ .Values.environment.stage }}
+              servicePort: http
+  tls: 
+    - secretName: {{ .Values.ingress.tls.secretName }}
+      hosts:
+        - {{ .Values.ingress.hostName }}
+{{- end }}
